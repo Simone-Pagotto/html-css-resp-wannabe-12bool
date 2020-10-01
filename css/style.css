@@ -5,6 +5,7 @@
 }
 
 .container {
+  padding-top: 25px;
   background-color: lavender;
   text-align: center;
 }
@@ -16,6 +17,7 @@
 
 img {
   height: 200px;
+  margin-top: 20px;
 }
 
 .container:nth-last-of-type(1) > div > img,
@@ -26,6 +28,66 @@ img {
   padding: 30px
 }
 
+@media screen and (max-width: 768px) {
+  .container{
+    font-size: 0.75em;
+  }
+
+  .container:nth-child(2) > div:first-child > img{
+
+    width:calc(0.6 * 200px);
+    height: auto;
+  }
+
+  .container:nth-child(2) > div:nth-child(2) > img{
+    width:25%;
+    height: auto;
+  }
+
+  .container:nth-child(4) > div > img{
+    width:20%;
+    height: auto;
+  }
+
+  .container:nth-child(6) > div > img,
+  .container:nth-child(7) > div > img,
+  .container:nth-child(8) > div > img {
+    width:10%;
+    height: auto;
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+  .container{
+    font-size: 0.9em;
+  }
+
+  .container:nth-child(2) > div:first-child > img{
+
+    width:calc(0.5 * 200px);
+    height: auto;
+  }
+
+  .container:nth-child(2) > div:nth-child(2) > img{
+    width:40%;
+    height: auto;
+  }
+
+  .container:nth-child(4) > div > img{
+    width:35%;
+    height: auto;
+  }
+
+  .container:nth-child(6) > div > img,
+  .container:nth-child(7) > div > img,
+  .container:nth-child(8) > div > img {
+    width:20%;
+    height: auto;
+    padding: 15px;
+  }
+}
 
 
 
